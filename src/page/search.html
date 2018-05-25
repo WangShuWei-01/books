@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/libs/flexible.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="render-header"></header>
+        <div class="content">
+            <div class="inner-content">
+                <ul class="type-tags"></ul>
+                <ul class="shelf-list search-list none"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/x-handlebars-template" id="tag-tpl">
+    {{#each this}}
+    <li class="tag">{{this}}</li>
+    {{/each}}
+</script>
+<script src="../js/libs/require.js"></script>
+<script>
+    require(['../js/main.js'], function() {
+        require(['search'])
+    })
+</script>

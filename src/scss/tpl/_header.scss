@@ -1,0 +1,110 @@
+@import "../_mixin.scss";
+@import "../_config.scss";
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    background-color: $header-bg;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+    .icon-sign {
+        width: pxTorem(44px);
+        height: pxTorem(44px);
+        @include bg("../../imgs/icon-sign.png");
+        background-size: pxTorem(22px);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .icon-person {
+        width: pxTorem(44px);
+        height: pxTorem(44px);
+        @include bg("../../imgs/icon-person.png");
+        background-size: pxTorem(22px);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .switch-tab {
+        width: pxTorem(120px);
+        height: pxTorem(44px);
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        span {
+            width: pxTorem(60px);
+            height: pxTorem(44px);
+            text-align: center;
+            line-height: pxTorem(44px);
+            font-size: pxTorem($fz14);
+            &.active {
+                color: $tab-active-color;
+            }
+        }
+        .line {
+            width: pxTorem(60px);
+            position: absolute;
+            left: 0;
+            bottom: pxTorem(-1px);
+            transition: transform .5s;
+            &:before {
+                content: '';
+                width: pxTorem(34px);
+                height: pxTorem(2px);
+                margin: 0 auto;
+                background-color: $tab-active-color;
+                display: block;
+            }
+            &.move {
+                transform: translateX(pxTorem(60px));
+            }
+        }
+    }
+    .icon-back {
+        width: pxTorem(44px);
+        height: pxTorem(44px);
+        @include bg("../../imgs/icon-back.png");
+        background-size: pxTorem(22px);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .search-wrap {
+        margin: pxTorem(5px) pxTorem(20px) 0 pxTorem(44px);
+        height: pxTorem(34px);
+        background-color: $write-color;
+        display: flex;
+        font-size: pxTorem($fz12);
+        .icon-search {
+            width: pxTorem(34px);
+            height: pxTorem(34px);
+            @include bg("../../imgs/icon-search.png");
+            background-size: pxTorem(16px);
+            border-right: 1px solid $border-color;
+        }
+        .ipt {
+            flex: 1;
+            height: pxTorem(34px);
+            padding: 0 pxTorem(10px);
+        }
+        .search-btn {
+            width: pxTorem(44px);
+            height: pxTorem(34px);
+            line-height: pxTorem(34px);
+            text-align: center;
+            border-left: 1px solid $border-color;
+        }
+    }
+    .title {
+        margin-left: pxTorem(44px);
+        line-height: pxTorem(44px);
+    }
+    .icon-home {
+        width: pxTorem(44px);
+        height: pxTorem(44px);
+        @include bg("../../imgs/icon-home.png");
+        background-size: pxTorem(16px);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

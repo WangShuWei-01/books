@@ -1,0 +1,265 @@
+@import "_common.scss";
+@import "tpl/_header.scss";
+@import "tpl/book-t-b-list.scss";
+.city-swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        &.city-scroll>div {
+            width: 100%;
+            position: relative;
+            &:before {
+                content: attr(down);
+                display: block;
+                width: 100%;
+                height: pxTorem(44px);
+                background-color: pink;
+                line-height: pxTorem(44px);
+                text-align: center;
+                position: absolute;
+                top: -(pxTorem(44px));
+                left: 0;
+            }
+            &:after {
+                content: attr(up);
+                display: block;
+                width: 100%;
+                height: pxTorem(44px);
+                background-color: pink;
+                line-height: pxTorem(44px);
+                text-align: center;
+                position: absolute;
+                bottom: -(pxTorem(44px));
+                left: 0;
+            }
+        }
+    }
+}
+
+.search-link {
+    width: 100%;
+    padding: pxTorem(15px);
+    box-sizing: border-box;
+    display: flex;
+    .not-ipt {
+        border: 1px solid $border-color;
+        @include bg("../imgs/icon-search.png", pxTorem(10px));
+        background-size: pxTorem(14px);
+        padding: pxTorem(8px) pxTorem(34px);
+        flex: 1;
+        color: $black-color;
+    }
+    .switch-shelf {
+        @include wh(pxTorem(34px), pxTorem(34px));
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        @include bg("../imgs/icon-switch.png");
+        background-size: pxTorem(14px);
+        margin-left: pxTorem(15px);
+    }
+    .switch-shelf-list {
+        @include wh(pxTorem(34px), pxTorem(34px));
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        @include bg("../imgs/icon-swicth-list.png");
+        background-size: pxTorem(14px);
+        margin-left: pxTorem(15px);
+    }
+}
+
+.index-top-btns {
+    width: 100%;
+    display: flex;
+    li {
+        flex: 1;
+        margin: pxTorem(10px);
+        a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            img {
+                @include wh(pxTorem(22px), pxTorem(22px));
+            }
+            span {
+                font-size: pxTorem(14px);
+                color: $gray-color;
+                line-height: 2;
+                display: block;
+            }
+        }
+    }
+}
+
+.book-l-r-list {
+    width: 100%;
+    &>li {
+        width: 100%;
+        padding: pxTorem(15px);
+        border-bottom: 1px solid $border-color;
+        box-sizing: border-box;
+        a {
+            width: 100%;
+            display: block;
+            display: flex;
+            .book-cover {
+                width: pxTorem(86px);
+                height: pxTorem(114px);
+                overflow: hidden;
+                position: relative;
+                img {
+                    @include wh;
+                }
+                .order {
+                    background-color: $buttle-active-bg;
+                    color: $write-color;
+                    padding: pxTorem(2px) pxTorem(6px);
+                    position: absolute;
+                    top: 0;
+                    left: pxTorem(10px);
+                }
+                .book-status {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    color: $write-color;
+                    line-height: 2;
+                    padding-left: pxTorem(10px);
+                    background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, .3));
+                }
+            }
+            .book-info {
+                flex: 1;
+                margin-left: pxTorem(15px);
+                .title {
+                    font-size: pxTorem(14px);
+                    color: $black-color;
+                }
+                span {
+                    display: block;
+                    &.author {
+                        font-size: pxTorem(12px);
+                        color: $gray-color;
+                        margin-top: pxTorem(10px);
+                    }
+                    &.intro {
+                        font-size: pxTorem(12px);
+                        color: $gray-color;
+                        margin-top: pxTorem(10px);
+                        line-height: 1.5;
+                        @include line(2);
+                    }
+                }
+                .tag-list {
+                    li {
+                        border: 1px solid $green-color;
+                        color: $green-color;
+                        border-radius: 4px;
+                        margin: pxTorem(6px) pxTorem(6px) 0 0;
+                        display: inline-block;
+                        padding: pxTorem(2px) pxTorem(4px);
+                    }
+                }
+            }
+        }
+        &.book-item {
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid $border-color;
+            padding: pxTorem(15px);
+            box-sizing: border-box;
+        }
+    }
+}
+
+.shelf-list {
+    width: 100%;
+    li:nth-child(1) {
+        a {
+            padding: 0 pxTorem(15px) pxTorem(15px) pxTorem(15px);
+        }
+    }
+    a {
+        display: flex;
+        padding: pxTorem(15px);
+        border-bottom: 1px solid $search-border;
+        .book-cover {
+            width: pxTorem(100px);
+            height: pxTorem(140px);
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+            background-color: $book-bg;
+            box-shadow: 0 pxTorem(6px) pxTorem(5px) pxTorem(-3px) $book-shadow-color;
+            border: pxTorem(1px) solid $book-border-color;
+            border-bottom: none;
+        }
+        .book-info {
+            margin-left: pxTorem(10px);
+            .title {
+                font-size: pxTorem(16px);
+                color: $black-color;
+                margin: pxTorem(6px) 0;
+            }
+            .author,
+            .newest {
+                font-size: pxTorem(14px);
+                color: $gray-color;
+                line-height: 2;
+            }
+            .summary {
+                font-size: pxTorem(14px);
+                color: $gray-color;
+                margin-bottom: pxTorem(6px);
+                @include line(2);
+            }
+        }
+    }
+    &.list-type {
+        display: flex;
+        flex-flow: wrap;
+        li {
+            width: 33.3%;
+            display: flex;
+            a {
+                width: pxTorem(100px);
+                padding: 0 pxTorem(15px);
+                border-bottom: none;
+                flex-direction: column;
+                .book-info {
+                    margin-left: 0;
+                    p {
+                        display: block;
+                    }
+                    .title {
+                        font-size: pxTorem(12px);
+                    }
+                    .author,
+                    .newest {
+                        display: none;
+                    }
+                }
+            }
+            &:nth-child(3n+1) {
+                justify-content: flex-start;
+            }
+            &:nth-child(3n+2) {
+                justify-content: center;
+            }
+            &:nth-child(3n) {
+                justify-content: end;
+            }
+        }
+    }
+}

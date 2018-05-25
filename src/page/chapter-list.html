@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/libs/flexible.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/chapter-list.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="render-header"></header>
+        <div class="chapter-wrap">
+            <ul class="chapter-list"></ul>
+        </div>
+        <script type="text/x-handlebars-template" id="chapter-template">
+            {{#each this}}
+            <li chapter-id="{{@index}}">{{title}}</li>
+            {{/each}}
+        </script>
+    </div>
+</body>
+
+</html>
+
+<script src="../js/libs/require.js"></script>
+<script>
+    require(['../js/main.js'], function() {
+        require(['chapterList'])
+    })
+</script>

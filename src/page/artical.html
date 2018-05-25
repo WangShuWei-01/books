@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/libs/flexible.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/artical.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <section class="artical-con none">
+
+        </section>
+        <script type="text/x-handlebars-template" id="artical">
+            <h1>{{t}}</h1>
+            {{#each p}}
+            <p>{{this}}</p>
+            {{/each}}
+        </script>
+        <section class="set-wrap none">
+            <div>
+                <section class="set-t">
+                    <span class="icon-circle-back">返回</span>
+                </section>
+                <div class="mask"></div>
+                <section class="set-b">
+                    <div class="chapter-btns">
+                        <div class="pre-btn">上一章</div>
+                        <div>
+                            <div>
+                                <span class="cur-chapter"></span>/
+                                <span class="total-chapter"></span>
+                            </div>
+                        </div>
+                        <div class="next-btn">下一章</div>
+                    </div>
+                    <div class="style-btns">
+                        <dl class="chapter-btn">
+                            <dt></dt>
+                            <dd>目录</dd>
+                        </dl>
+                        <dl class="size">
+                            <dt></dt>
+                            <dd>字体</dd>
+                        </dl>
+                        <dl class="day">
+                            <dt></dt>
+                            <dd>夜间</dd>
+                        </dl>
+                        <dl class="down">
+                            <dt></dt>
+                            <dd>下载</dd>
+                        </dl>
+                    </div>
+                    <div class="set-panel none">
+                        <div class="set-font">
+                            <span>字体</span>
+                            <div>
+                                <button class="large-btn">大</button>
+                                <button class="small-btn">小</button>
+                            </div>
+                        </div>
+                        <div class="set-bg">
+                            <span>背景</span>
+                            <ul class="set-bg-btns">
+                                <li bg-color="#f7eee5" class="active"></li>
+                                <li bg-color="#e9dfc7"></li>
+                                <li bg-color="#a4a4a4"></li>
+                                <li bg-color="#cdefce"></li>
+                                <li bg-color="#283548"></li>
+                                <li bg-color="#0f1410"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
+<script src="../js/libs/require.js"></script>
+<script>
+    require(['../js/main.js'], function() {
+        require(['artical'])
+    })
+</script>

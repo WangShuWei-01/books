@@ -1,0 +1,31 @@
+@import "../_config.scss";
+@import "../_mixin.scss";
+.book-t-b-list {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    padding-bottom: pxTorem(10px);
+    li {
+        width: 33.3%;
+        margin-top: pxTorem(15px);
+        a {
+            display: block;
+            width: pxTorem(86px);
+            margin: 0 auto;
+            .book-cover {
+                width: 100%;
+                height: pxTorem(114px);
+                box-shadow: 0 pxTorem(6px) pxTorem(5px) pxTorem(-3px) $book-shadow-color;
+                img {
+                    @include wh;
+                }
+            }
+            .title {
+                color: $gray-color;
+                font-size: pxTorem(12px);
+                line-height: 2;
+                @include line(2);
+            }
+        }
+    }
+}
