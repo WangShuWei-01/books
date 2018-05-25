@@ -16,6 +16,14 @@ var sequence = require("gulp-sequence");
 
 var mock = require("./mock");
 
+var querystring = require('querystring');
+
+var userList = [{
+    username: 'wang',
+    pwd: '123',
+    isLogin: false
+}]
+
 
 // gulp.task("css", function() {
 //     return gulp.src("src/scss/*.scss")
@@ -47,6 +55,49 @@ gulp.task("server", ['css'], function() {
             livereload: true,
             open: true,
             middleware: function(req, res, next) {
+                if (req.url == '/login') {
+                    var chunkArr = [];
+                    req.on('data', function(chunk) {
+                        chunkArr.push(chunk)
+                    })
+                    req.on('end', function() {
+                        var params = querystring.parse(Buffer.concat(chunkArr).toString());
+                        var mask = false;
+                        userList.forEach(function(item, index) {
+                            if (item.username === params.username && item.pwd === params.pwd) {
+                                item.isLogin = true;
+                                mask = true;
+                                res.end(JSON.stringify({ code: 1, msg: '登录成功' }))
+                            }
+                        })
+                        if (!mask) {
+                            res.end(JSON.stringify({ code: 2, msg: '登录失败' }))
+                        }
+                        next()
+                    })
+                    return false;
+                } else if (req.url == '/isLogin') {
+                    var chunkArr = [];
+                    req.on('data', function(chunk) {
+                        chunkArr.push(chunk)
+                    })
+                    req.on('end', function() {
+                        var params = querystring.parse(Buffer.concat(chunkArr).toString());
+                        var mask = false;
+                        userList.forEach(function(item, index) {
+                            if (item.username === params.username) {
+                                mask = true;
+                                res.end(JSON.stringify({ code: 1, result: item.isLogin }))
+                            }
+                        })
+                        if (!mask) {
+                            res.end(JSON.stringify({ code: 2, msg: '请登录' }))
+                        };
+                        next()
+                    })
+                    return false;
+                }
+
                 if (/\/api/g.test(req.url)) {
                     res.setHeader("content-type", "text/json;charset=utf-8");
                     var data = mock(req.url);

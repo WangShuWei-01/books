@@ -4,11 +4,9 @@
 .city-swiper {
     width: 100%;
     height: 100%;
-    overflow: hidden;
     .swiper-slide {
         width: 100%;
         height: 100%;
-        overflow: hidden;
         .banner img {
             width: 100%;
             height: auto;
@@ -261,5 +259,14 @@
                 justify-content: end;
             }
         }
+    }
+}
+
+.bookrack {
+    display: flex;
+    flex-direction: column;
+    .box {
+        flex: 1;
+        overflow: auto;
     }
 }

@@ -1,4 +1,4 @@
-require(['jquery', 'render', 'renderHeader', 'getReq', 'bscroll'], function($, render, header, getReq, bscroll) {
+require(['jquery', 'render', 'renderHeader', 'getReq', 'bscroll', 'storage'], function($, render, header, getReq, bscroll, storage) {
     header({ title: '目录' });
 
     var fiction_id = getReq().fiction_id;
@@ -11,9 +11,10 @@ require(['jquery', 'render', 'renderHeader', 'getReq', 'bscroll'], function($, r
             fiction_id: fiction_id
         },
         success: function(res) {
-            console.log(res);
             render(res.item.toc, $('#chapter-template'), $('.chapter-list'));
-            var scroll = new bscroll('.chapter-wrap');
+            var scroll = new bscroll('.chapter-wrap', {
+                click: true
+            });
             var target;
             if (chapter_id) {
                 target = chapter_id;
@@ -27,5 +28,11 @@ require(['jquery', 'render', 'renderHeader', 'getReq', 'bscroll'], function($, r
         error: function(error) {
             console.warn(error)
         }
+    })
+
+    $('.chapter-list').on('click', 'li', function() {
+        var index = $(this).index();
+        storage.set('chapter_id', index);
+        location.href = '../../page/artical.html?fiction_id=' + fiction_id + '&chapter_id=' + index;
     })
 })

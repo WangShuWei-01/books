@@ -1,0 +1,25 @@
+@import '_common.scss';
+.wrap {
+    h1 {
+        font-size: pxTorem(30px);
+        color: $btn-orange-bg;
+        margin: pxTorem(50px) 0;
+        text-align: center;
+    }
+    input {
+        width: 80%;
+        margin: pxTorem(20px) auto;
+        padding: pxTorem(10px) pxTorem(10px);
+        border: 1px solid gray;
+        border-radius: pxTorem(10px);
+    }
+    button {
+        width: 60%;
+        height: pxTorem(44px);
+        background-color: $btn-orange-bg;
+        color: #fff;
+        font-size: pxTorem(16px);
+        border: none;
+        margin: pxTorem(20px) auto;
+    }
+}

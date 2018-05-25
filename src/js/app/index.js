@@ -1,4 +1,4 @@
-require(['jquery', 'swiper', 'bscroll', 'render', 'text!bookTb', 'text!bookLr', 'GetSlideDirection'], function($, swiper, bscroll, render, bookTb, bookLr, GetSlideDirection) {
+require(['jquery', 'swiper', 'bscroll', 'render', 'text!bookTb', 'text!bookLr', 'GetSlideDirection', 'storage'], function($, swiper, bscroll, render, bookTb, bookLr, GetSlideDirection, storage) {
     //初始化最外层swiper
     var citySwiper = new swiper(".city-swiper", {
         on: {
@@ -188,6 +188,38 @@ require(['jquery', 'swiper', 'bscroll', 'render', 'text!bookTb', 'text!bookLr', 
         }
         $('.shelf-list').toggleClass('list-type')
     })
+
+    $('.icon-person').on('click', function() {
+        isLogin()
+    })
+
+    function isLogin() {
+        var username = storage.get('username') || '';
+        if (!username) {
+            location.href = '../../page/login.html';
+        } else {
+            $.ajax({
+                url: "/isLogin",
+                type: "post",
+                dataType: "json",
+                data: {
+                    username: username
+                },
+                success: function(res) {
+                    console.log(res)
+                    if (res.code == 1 && res.result) {
+                        window.location.href = '../../page/my.html';
+                    } else if ((res.code == 1 && !res.result) || res.code == 2) {
+                        location.href = '../../page/login.html';
+                    }
+                },
+                error: function(error) {
+                    console.warn(error)
+                }
+            });
+        }
+    }
+
 
     initPage()
 })

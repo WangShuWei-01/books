@@ -1,0 +1,277 @@
+{
+    "items": [{
+            "ad": 0,
+            "word_count": 110292,
+            "owner": 0,
+            "allow_discount": false,
+            "ad_time": 0,
+            "click": 10822330,
+            "free_chapter": false,
+            "score_count": 1125,
+            "copyright": "",
+            "title": "老九门",
+            "on_sale": true,
+            "comment_count": 595,
+            "has_ad": 0,
+            "ad_duration": 0,
+            "latest_id": 76,
+            "score": 8.03,
+            "allow_free_read": 1,
+            "rights_id": 10080,
+            "channel": [
+                1
+            ],
+            "updated": 1483690215,
+            "finish": false,
+            "rec_words": "盗墓笔记前传老九门",
+            "tags": [
+                "寻墓探险",
+                "悬疑探险",
+                "灵异"
+            ],
+            "price": 5,
+            "qrc_words": "扫码读原著，精彩抢先看！",
+            "chapter_count": 66,
+            "authors": "南派三叔",
+            "categories": [{
+                    "category_id": 8000000,
+                    "label": "灵异"
+                },
+                {
+                    "category_id": 8000300,
+                    "label": "悬疑探险"
+                }
+            ],
+            "rights": "阅文集团旗下起点中文网",
+            "level": 0,
+            "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p01TQfpyV6px/06EirDzmjj8zuK.jpg",
+            "summary": "【陈伟霆、张艺兴、赵丽颖主演，同名电视剧正在热播】民国时期，长沙车站开来一辆来历不明的火车，彻查发现",
+            "fiction_id": 323725,
+            "outer_id": "4757330804346503",
+            "latest": "第三十一章 惨胜"
+        },
+        {
+            "ad": 0,
+            "word_count": 3063749,
+            "owner": 0,
+            "allow_discount": false,
+            "ad_time": 0,
+            "click": 64587492,
+            "free_chapter": false,
+            "score_count": 1713,
+            "copyright": "",
+            "title": "绝命诱惑",
+            "on_sale": false,
+            "comment_count": 1311,
+            "has_ad": 0,
+            "ad_duration": 0,
+            "latest_id": 1067,
+            "score": 8.26,
+            "allow_free_read": 1,
+            "rights_id": 10080,
+            "channel": [
+                1
+            ],
+            "updated": 1434361664,
+            "finish": true,
+            "tags": [
+                "异术超能",
+                "都市异能",
+                "热血都市",
+                "都市"
+            ],
+            "price": 5,
+            "chapter_count": 1068,
+            "authors": "心梦无痕",
+            "categories": [{
+                    "category_id": 20000,
+                    "label": "热血都市"
+                },
+                {
+                    "category_id": 20300,
+                    "label": "都市异能"
+                },
+                {
+                    "category_id": 5000000,
+                    "label": "都市"
+                },
+                {
+                    "category_id": 5000300,
+                    "label": "异术超能"
+                }
+            ],
+            "rights": "阅文集团旗下起点中文网",
+            "level": 0,
+            "cover": "http://cover.read.duokan.com/mfsv2/download/s010/p01glg5pchIi/JfGjhpqRREi1WE.jpg",
+            "summary": "白天，他是名牌大学的高材生；晚上，他是圣云美容院的金牌美体师。",
+            "fiction_id": 42318,
+            "outer_id": "5379bf930ea49711bc2c6118",
+            "latest": "第二百零七章  重回人间"
+        },
+        {
+            "ad": 0,
+            "word_count": 2785944,
+            "owner": 0,
+            "allow_discount": false,
+            "ad_time": 0,
+            "click": 119530092,
+            "free_chapter": false,
+            "score_count": 4455,
+            "copyright": "",
+            "title": "婚后相爱：腹黑老公爆萌妻",
+            "on_sale": true,
+            "comment_count": 3450,
+            "has_ad": 0,
+            "ad_duration": 0,
+            "latest_id": 2631,
+            "score": 8.62,
+            "allow_free_read": 1,
+            "rights_id": 10080,
+            "channel": [
+                2
+            ],
+            "updated": 1452947570,
+            "finish": true,
+            "tags": [
+                "现代言情",
+                "豪门世家"
+            ],
+            "price": 5,
+            "chapter_count": 2632,
+            "authors": "一笑倾晨",
+            "categories": [{
+                    "category_id": 18000000,
+                    "label": "现代言情"
+                },
+                {
+                    "category_id": 18000700,
+                    "label": "豪门世家"
+                }
+            ],
+            "rights": "阅文集团旗下云起书院",
+            "level": 0,
+            "cover": "http://cover.read.duokan.com/mfsv2/download/s010/p01I1zQew1EB/MEp59LJ9HQEJ7f.jpg",
+            "summary": "“老公，我要……”\n“要什么？”\n“要……”\n话音未落，迟早早就猛然扑了过来。",
+            "fiction_id": 306643,
+            "outer_id": "5595fd599871fe7fe3d83ea0",
+            "latest": "第2632章：全文完结"
+        },
+        {
+            "ad": 0,
+            "word_count": 9562613,
+            "owner": 0,
+            "allow_discount": false,
+            "ad_time": 0,
+            "click": 48359316,
+            "free_chapter": false,
+            "score_count": 4640,
+            "copyright": "",
+            "title": "超品相师",
+            "new_tags": [
+                "玄学"
+            ],
+            "on_sale": true,
+            "comment_count": 3276,
+            "has_ad": 0,
+            "ad_duration": 0,
+            "latest_id": 3471,
+            "score": 8.38,
+            "allow_free_read": 1,
+            "rights_id": 10080,
+            "channel": [
+                1
+            ],
+            "updated": 1516059713,
+            "finish": true,
+            "tags": [
+                "热血都市",
+                "都市情缘",
+                "都市",
+                "都市生活"
+            ],
+            "price": 5,
+            "chapter_count": 3465,
+            "authors": "九灯和善",
+            "categories": [{
+                    "category_id": 20000,
+                    "label": "热血都市"
+                },
+                {
+                    "category_id": 20100,
+                    "label": "都市情缘"
+                },
+                {
+                    "category_id": 5000000,
+                    "label": "都市"
+                },
+                {
+                    "category_id": 5000100,
+                    "label": "都市生活"
+                }
+            ],
+            "rights": "阅文集团旗下起点中文网",
+            "level": 0,
+            "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p017FYO0QmyQ/RWX9PUBWGHUWVJ.jpg",
+            "summary": "相师分九品，一品一重天\n风水有境界，明理，养气，修身，问道。\n二十一世纪的一位普通青年偶获诸葛亮生前...",
+            "fiction_id": 301342,
+            "outer_id": "22390647000809802",
+            "latest": "结束语"
+        },
+        {
+            "ad": 0,
+            "word_count": 5680598,
+            "owner": 0,
+            "allow_discount": false,
+            "ad_time": 0,
+            "click": 71657451,
+            "free_chapter": false,
+            "score_count": 4927,
+            "copyright": "",
+            "title": "驭房有术",
+            "new_tags": [
+                "轻松",
+                "法师",
+                "感情",
+                "玄学"
+            ],
+            "on_sale": true,
+            "comment_count": 2630,
+            "has_ad": 0,
+            "ad_duration": 0,
+            "latest_id": 2364,
+            "score": 8.12,
+            "allow_free_read": 1,
+            "rights_id": 10080,
+            "channel": [
+                1
+            ],
+            "updated": 1527182431,
+            "finish": false,
+            "tags": [
+                "风水秘术",
+                "灵异",
+                "灵异奇谈"
+            ],
+            "price": 5,
+            "chapter_count": 2365,
+            "authors": "铁锁",
+            "categories": [{
+                    "category_id": 8000000,
+                    "label": "灵异"
+                },
+                {
+                    "category_id": 8000400,
+                    "label": "灵异奇谈"
+                }
+            ],
+            "rights": "阅文集团旗下起点中文网",
+            "level": 0,
+            "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p01I66oHszK2/7CDwQEqR7CFkXT.jpg",
+            "summary": "进城闯荡的小阿姨衣锦还乡，张禹的老妈心动了，决定让儿子前去投奔。不曾想，所谓的豪宅就是一个三十平米的...",
+            "fiction_id": 352876,
+            "outer_id": "5691370404281003",
+            "latest": "第2365章 烧不坏"
+        }
+    ],
+    "result": 0
+}

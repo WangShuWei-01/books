@@ -101,49 +101,29 @@
                             <ul class="book-l-r-list" id="load-more"></ul>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide bookrack">
                         <div class="search-link">
                             <div class="not-ipt">请输入书名/关键字/作者</div>
                             <span class="switch-shelf"></span>
                         </div>
-                        <div>
+                        <div class="box">
                             <ul class="shelf-list list-type">
-                                <li>
-                                    <a href="#">
-                                        <div class="book-cover">
-                                            <img src="imgs/book1.jpg" alt="">
-                                        </div>
-                                        <div class="book-info">
-                                            <p class="title">{{title}}</p>
-                                            <p class="author">{{author}}</p>
-                                            <p class="newest">{{newest}}</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="book-cover">
-                                            <img src="imgs/book1.jpg" alt="">
-                                        </div>
-                                        <div class="book-info">
-                                            <p class="title">{{title}}</p>
-                                            <p class="author">{{author}}</p>
-                                            <p class="newest">{{newest}}</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="book-cover">
-                                            <img src="imgs/book1.jpg" alt="">
-                                        </div>
-                                        <div class="book-info">
-                                            <p class="title">{{title}}</p>
-                                            <p class="author">{{author}}</p>
-                                            <p class="newest">{{newest}}</p>
-                                        </div>
-                                    </a>
-                                </li>
+                                <script type="text/x-handlebars-template" id="bookrack">
+                                    {{#each items}}
+                                    <li>
+                                        <a href="#">
+                                            <div class="book-cover">
+                                                <img src="{{cover}}" alt="">
+                                            </div>
+                                            <div class="book-info">
+                                                <p class="title">{{title}}</p>
+                                                <p class="author">{{authors}}</p>
+                                                <p class="newest">最新:{{latest}}</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    {{/each}}
+                                </script>
                             </ul>
                         </div>
                     </div>
@@ -154,7 +134,7 @@
     <script src="js/libs/require.js"></script>
     <script>
         require(['./js/main.js'], function() {
-            require(['index'])
+            require(['index', 'bookrack'])
         })
     </script>
 </body>
